@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        .text-desc {
+            font-size: 12px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="p-3">
+            <h2 class="p-3">Операции</h2>
+        </section>
+        <section class="p-3">
+            <form class="form-row border-bottom pb-3">
+                <div class="input-group m-2">
+                    <div class="form-floating m-2">
+                        <input type="text" class="form-control" id="inputName" placeholder="Отправитель">
+                        <label for="inputName">Отправитель</label>
+                    </div>
+                    <div class="form-floating m-2">
+                        <input type="text" class="form-control" id="inputName2" placeholder="Получатель">
+                        <label for="inputName2">Получатель</label>
+                    </div>
+                    <div class="form-floating m-2">
+                        <input type="text" class="form-control" id="inputArticle" placeholder="Статья">
+                        <label for="inputArticle">Статья</label>
+                    </div>
+                    <div class="form-floating m-2">
+                        <input type="text" class="form-control" id="inputProject" placeholder="Проект">
+                        <label for="inputProject">Проект</label>
+                    </div>
+                    <div class="form-floating m-2">
+                        <input type="text" class="form-control" id="inputOrder" placeholder="Заказ">
+                        <label for="inputOrder">Заказ</label>
+                    </div>
+                </div>
+                <div class="input-group p-2">
+                    <div class="col-3">
+                        <label class="ms-2" for="inputDate">Даты</label>
+                        <div class="input-group">
+                            <div class="me-3" style="width: 217px;">
+                                <input type="date" class="form-control m-2" id="inputDate" aria-describedby="emailHelp"
+                                    placeholder="Начало">
+                                <div id="dateHelp" class="form-text ms-2">Начало</div>
+                            </div>
+                            <p class="pt-3">-</p>
+                            <div style="width: 215px;">
+                                <input type="date" class="form-control m-2" id="inputDate2" placeholder="Конец">
+                                <div id="dateHelp2" class="form-text ms-2">Конец</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="ms-2" for="inputPrice">Сумма</label>
+                        <div class="input-group">
+                            <div class="me-3" style="width: 217px;">
+                                <input type="number" min="1" step="any" class="form-control m-2" id="inputPrice"
+                                    placeholder="От">
+                            </div>
+                            <p class="pt-3">-</p>
+                            <div style="width: 217px;">
+                                <input type="number" min="1" step="any" class="form-control m-2" id="inputPrice"
+                                    placeholder="До">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="p-4">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+                <div class="col">
+                    <p class="fs-6">Найдено <span id="counter">2</ы> позиции</p>
+                </div>
+                <div class="col-1">
+                    <button type="button" class="btn btn-link text-dark">
+                        <i class="fa-solid fa-download fa-2x"></i></button>
+                    <button type="button" class="btn btn-link text-dark">
+                        <i class="fa-solid fa-circle-plus fa-2x"></i></button>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Дата</th>
+                        <th scope="col">Отправитель</th>
+                        <th scope="col-1"></th>
+                        <th scope="col">Получатель</th>
+                        <th scope="col">Сумма, руб.</th>
+                        <th scope="col">Описание</th>
+                        <th scope="col">Проект / Заказ</th>
+                        <th scope="col">Управление</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-wrap">
+                        <th scope="row" class="fw-normal">19.05.2022 <br><span
+                                class="text-black-50 text-desc">19.05.2022 19:30</span><br><span
+                                class="text-black-50 text-desc">Александр Валуев</span></th>
+                        <td>Внешний мир<br><span class="text-black-50 text-desc">Извне</span></td>
+                        <td><i class="fa-solid fa-right-long fa-xs"></i></td>
+                        <td><a href="#">Добровольский В.В.</a><br><span class="text-black-50 text-desc">Сбер</span></td>
+                        <td><a href="#">1 000 000</a><br><span class="text-black-50 text-desc">Перевод между
+                                счетами</span></td>
+                        <td>Выделение бюджета на закупку всех расходников, оборудования в Бишкеке</td>
+                        <td><a href="#">Цех в Киргизии</a><br><a href="#">№ 123456-ДС</a></td>
+                        <td>
+                            <button class="btn btn-link text-dark"><i class="fa-solid fa-pencil"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="fw-normal">19.05.2022 <br><span
+                                class="text-black-50 text-desc">19.05.2022 19:30</span><br><span
+                                class="text-black-50 text-desc">Александр Валуев</span></th>
+                        <td><a href="#">Добровольский В.В.</a><br><span class="text-black-50 text-desc">Сбер</span></td>
+                        <td><i class="fa-solid fa-right-long fa-xs"></i></td>
+                        <td><a href="#">Белецкая Ю.А.</a><br><span class="text-black-50 text-desc">MasterCard.
+                                Сбер</span></td>
+                        <td><a href="#">500 000</a><br><span class="text-black-50 text-desc">Выдача денег подотчетному
+                                лицу</span></td>
+                        <td>Первый транш</td>
+                        <td><a href="#">Цех в Киргизии</a><br><a href="#">№ 123456-ДС</a></td>
+                        <td>
+                            <button class="btn btn-link text-dark"><i class="fa-solid fa-pencil me-3"></i></button
+                                class="btn btn-link text-dark">
+                            <button class="btn btn-link text-dark"><i class="fa-solid fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="fw-normal">19.05.2022 <br><span
+                                class="text-black-50 text-desc">19.05.2022 19:30</span><br><span
+                                class="text-black-50 text-desc">Александр Валуев</span></th>
+                        <td>Внешний мир<br><span class="text-black-50 text-desc">Извне</span></td>
+                        <td><i class="fa-solid fa-right-long fa-xs"></i></td>
+                        <td><a href="#">Добровольский В.В.</a><br><span class="text-black-50 text-desc">Сбер</span></td>
+                        <td><a href="#">1 000 000</a><br><span class="text-black-50 text-desc">Перевод между
+                                счетами</span></td>
+                        <td>Выделение бюджета на закупку всех расходников, оборудования в Бишкеке</td>
+                        <td><a href="#">Цех в Киргизии</a><br><a href="#">№ 123456-ДС</a></td>
+                        <td>
+                            <button class="btn btn-link text-dark"><i class="fa-solid fa-pencil me-3"></i></button>
+                            <button class="btn btn-link text-dark"><i class="fa-solid fa-trash-can"></i></button
+                                class="btn btn-link text-dark">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
